@@ -52,13 +52,14 @@ body.addEventListener("click", function (e) {
     }
 
     if (gameCount === 5) {
-      results.textContent = `Game Over!! Final Score You: ${playerScore} and Computer: ${computerScore} ${winner}`;
+      results.innerText = `Game Over!! Final Score You: ${playerScore} and Computer: ${computerScore} 
+      ${winner}`;
       rockBtn.setAttribute("disabled", "true");
       paperBtn.setAttribute("disabled", "true");
       scissorBtn.setAttribute("disabled", "true");
       scoreEl.remove();
     } else {
-      results.textContent = `Your choice: ${playerSelection} and Computer choice: ${computerSelection} ${result} `;
+      results.innerText = `Your choice: ${playerSelection} and Computer choice: ${computerSelection} "${result}" `;
       scoreEl.textContent = `Score You: ${playerScore} and Computer: ${computerScore}`;
     }
   }
